@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+
+:root {
+    --heading-ff: 'Playfair Display', serif;
+}
+
+.primary-nav {
+    background-color: rgb(42, 42, 42);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.primary-nav .heading {
+    font-family: var(--heading-ff);
+    padding: .5em;
+    letter-spacing: 3px;
+}
+
+.red {
+    color: red;
+}
+
+.links {
+    display: none;
+}
+
+.small {
+    font-size:medium;
+}
+
+.primary-nav img {
+    width: 25px;    
+    height: 20px;
+    position: absolute;
+    left: 1em;
+    cursor: pointer;
+}
