@@ -4,7 +4,7 @@ import hamMenuIcon from '../media/ham-menu.png'
 import crossIcon from '../media/cross.png'
 
 export const Nav = () => {
-    const [showMenu, setShowMenu] = useState(true);
+    const [showMenu, setShowMenu] = useState(false);
 
     return (
         <nav className='primary-nav'>
