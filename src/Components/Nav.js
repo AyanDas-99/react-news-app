@@ -1,24 +1,26 @@
+import { useState } from 'react'
 import '../styles/nav.css'
 import hamMenuIcon from '../media/ham-menu.png'
 import crossIcon from '../media/cross.png'
-import '../scripts/demo.js'
 
 export const Nav = () => {
+    const [showMenu, setShowMenu] = useState(true);
+
     return (
         <nav className='primary-nav'>
-            <img src={hamMenuIcon} id="menu-btn"/>
+            <img src={hamMenuIcon} id="menu-btn" onClick={() => setShowMenu(true)} />
             <h1 className='heading'>FAKES<span className='red'>.</span><span className='small'>com</span></h1>
-            <div className='links'>
-                <img src={crossIcon}/>
-                <ul className='link-list'>
-                    <li><a href='#'>HEADLINES</a></li>
+            <div className={`links ${showMenu && "showmenu"}`}>
+                <div className={`link-list`}>
+                <img src={crossIcon} onClick={() => setShowMenu(false)} />
+                    <a href='#'>HEADLINES</a>
                     <div className='divider'></div>
-                    <li><a href='#'>UNITED STATES</a></li>
-                    <li><a href='#'>INDIA</a></li>
-                    <li><a href='#'>BRITAIN</a></li>
-                    <li><a href='#'>RUSSIAN</a></li>
-                    <li><a href='#'>EUROPE</a></li>
-                </ul>
+                    <a href='#'>UNITED STATES</a>
+                    <a href='#'>INDIA</a>
+                    <a href='#'>BRITAIN</a>
+                    <a href='#'>RUSSIAN</a>
+                    <a href='#'>EUROPE</a>
+                </div>
             </div>
         </nav>
     )
