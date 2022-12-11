@@ -47,12 +47,12 @@ export const Headline = (props) => {
 
 
 export const AllNews = (props) => {
+    const noOfNews = 5
     const articles = props.news.articles;
-    console.log(articles)
     return (
         <div className='news'>
             <p className='tag'>{props.topic}</p>
-            {articles.slice(0, 10).map((article, key) => {
+            {articles.slice(0, noOfNews).map((article, key) => {
                 return (
                     <a href={article.url} target="_blank">
                         <div className='article'>
