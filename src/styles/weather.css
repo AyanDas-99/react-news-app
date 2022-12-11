@@ -1,0 +1,52 @@
+.weather {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0 5px grey;
+    padding: 1em;
+}
+
+.city {
+    color: grey;
+    font-size: small;
+    margin: 0;
+}
+
+.city img {
+    width: 25px;
+    margin: 5px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.temp img {
+    width: 80px;
+}
+
+.temp span {
+    font-size: 2.5rem;
+}
+
+.other img {
+    width: 20px;
+    margin: 2px;
+}
+
+.other {
+    text-align: left;
+    font-size: smaller;
+    line-height: 5px;
+}
+
+.other p {
+    margin: 0;
+}
+
+@media only screen and (max-width:1000px) {
+    .weather {
+        margin: 1em auto;
+    }
+}
