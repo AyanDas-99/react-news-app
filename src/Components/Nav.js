@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../styles/nav.css'
 import hamMenuIcon from '../media/ham-menu.png'
 import crossIcon from '../media/cross.png'
+import { Link } from 'react-router-dom'
 
 export const Nav = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -13,13 +14,13 @@ export const Nav = () => {
             <div className={`links ${showMenu && "showmenu"}`}>
                 <div className={`link-list`}>
                 <img src={crossIcon} onClick={() => setShowMenu(false)} />
-                    <a href='#'>HEADLINES</a>
+                    <a href='/Country'>HEADLINES</a>
                     <div className='divider'></div>
-                    <a href='#'>UNITED STATES</a>
-                    <a href='#'>INDIA</a>
-                    <a href='#'>BRITAIN</a>
-                    <a href='#'>RUSSIAN</a>
-                    <a href='#'>EUROPE</a>
+                    <Link to={'/Country'}>UNITED STATES</Link>
+                    <a href='/Country'>INDIA</a>
+                    <a href='/Country'>BRITAIN</a>
+                    <a href='/Country'>RUSSIAN</a>
+                    <a href='/Country`'>EUROPE</a>
                 </div>
             </div>
         </nav>
