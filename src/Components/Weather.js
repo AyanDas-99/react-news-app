@@ -6,6 +6,8 @@ import drops from '../media/drops.png';
 import therm from '../media/thermometer.png'
 import loc from '../media/loc.png'
 import '../styles/weather.css'
+import { Loading } from "./Loading";
+import '../styles/loading.css'
 
 export const Weather = (props) => {
 
@@ -32,23 +34,23 @@ export const Weather = (props) => {
         });
     }, [])
 
-    if (!weatherLoaded) {
+    if (weatherLoaded) {
 
         return (
             <div className="weather">
                 <p className="city"><img src={loc} />{props.city}</p>
                 <div className="hero">
-                    <div className="temp"><img src={cloud} /><span>36</span>&#8451;</div>
+                    <div className="temp"><img src={cloud} /><span>{weather.temp}</span>&#8451;</div>
                     <div className="other">
-                        <p><img src={therm} />Feels like 40</p>
-                        <p><img src={drops} />Humidity: <span>5</span></p>
-                        <p><img src={wind} />Wind: <span>5</span></p>
+                        <p><img src={therm} />Feels like {weather.feels_like}</p>
+                        <p><img src={drops} />Humidity: {weather.humidity}</p>
+                        <p><img src={wind} />Wind: {weather.wind_speed}</p>
                     </div>
                 </div>
             </div>
         )
     }
     else {
-        return <div></div>
+        <div className="weather loading"></div>
     }
 }
