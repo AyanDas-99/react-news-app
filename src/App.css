@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,7 +40,42 @@
 
 @media only screen and (min-width: 900px) {
   .Container {
-    margin: 0 auto;
+    margin: 1em auto;
     width: 90%;
   }
+
+
+  /* Custom */
+
+  .Container {
+    display: grid;
+    gap: 1em;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "a b"
+      "d b"
+      "d c";
+  }
+
+  .a {
+    grid-area: a;
+    justify-self: end;
+  }
+
+  .b {
+    grid-area: b;
+    /* border: 1px solid black; */
+  }
+
+  .c {
+    grid-area: c;
+    /* border: 1px solid black; */
+  }
+
+  .d {
+    grid-area: d;
+    justify-self: end;
+  }
+
 }
