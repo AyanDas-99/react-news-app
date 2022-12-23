@@ -54,7 +54,7 @@ export const AllNews = (props) => {
             <p className='tag'>{props.topic}</p>
             {articles.slice(0, noOfNews).map((article, key) => {
                 return (
-                    <a href={article.url} target="_blank">
+                    <a href={article.url} target="_blank" key={key}>
                         <div className='article'>
                             <img src={article.urlToImage} className='article-img' />
                             <div className='info'>
