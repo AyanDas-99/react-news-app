@@ -20,6 +20,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/Country' element={<Country />} />
+          <Route path='*' element={<></>} />
         </Routes>
       </Router>
       <div className='Container'>
