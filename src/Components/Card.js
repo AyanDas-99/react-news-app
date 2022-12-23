@@ -50,7 +50,7 @@ export const AllNews = (props) => {
     const noOfNews = 5
     const articles = props.news.articles;
     return (
-        <div className='news'>
+        <div className='news bg-white'>
             <p className='tag'>{props.topic}</p>
             {articles.slice(0, noOfNews).map((article, key) => {
                 return (
