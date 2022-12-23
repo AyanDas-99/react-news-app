@@ -1,39 +1,18 @@
 import './App.css';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
 import { Headline, AllNews } from './Components/Card';
 import { Nav } from './Components/Nav';
 import { Weather } from './Components/Weather';
 import './styles/loading.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Country } from './Components/Country';
+import { useGetNews } from './Custom-hooks/useGetNews';
 
-function getNews(topic, setNews, setNewsLoaded) {
-  axios.get(`https://newsapi.org/v2/everything?q=${topic}&from=2022-12-09&to=2022-12-09&sortBy=popularity&apiKey=8a1bfd2f0ece4203809f4677f8ae4b9e`).then(res => {
-    setNews(res.data);
-    setNewsLoaded(true);
-  });
-}
 
 function App() {
 
-
-  const [headline, setHeadline] = useState({});
-  const [headlineLoaded, setHeadlineLoaded] = useState(false);
-  const [sportsNews, setSportsNews] = useState({});
-  const [sportsLoaded, setSportsLoaded] = useState(false)
-  const [Politics, setPolitics] = useState({});
-  const [politicsLoaded, setPoliticsLoaded] = useState(false)
-
-
-  useEffect(() => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=8a1bfd2f0ece4203809f4677f8ae4b9e").then(res => {
-      setHeadline(res.data);
-      setHeadlineLoaded(true);
-    });
-    getNews('Sports', setSportsNews, setSportsLoaded);
-    getNews('Politics', setPolitics, setPoliticsLoaded);
-  }, [])
+  const [Politics, politicsLoaded] = useGetNews("politics", true);
+  const [sportsNews, sportsLoaded] = useGetNews("sports", true);
+  const [headline, headlineLoaded] = useGetNews("", false);
 
   return (
     <div className="App">
