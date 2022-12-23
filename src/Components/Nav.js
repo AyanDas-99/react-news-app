@@ -9,11 +9,11 @@ export const Nav = () => {
 
     return (
         <nav className='primary-nav'>
-            <img src={hamMenuIcon} id="menu-btn" onClick={() => setShowMenu(true)} />
+            <img src={hamMenuIcon} id="menu-btn" onClick={() => setShowMenu(true)} alt=""/>
             <h1 className='heading'>FAKES<span className='red'>.</span><span className='small'>com</span></h1>
             <div className={`links ${showMenu && "showmenu"}`}>
                 <div className={`link-list`}>
-                <img src={crossIcon} onClick={() => setShowMenu(false)} />
+                <img src={crossIcon} onClick={() => setShowMenu(false)} alt=""/>
                     <a href='/Country'>HEADLINES</a>
                     <div className='divider'></div>
                     <Link to={'/Country'}>UNITED STATES</Link>
