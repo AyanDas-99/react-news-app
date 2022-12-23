@@ -1,5 +1,5 @@
 import './App.css';
-import axios, { formToJSON } from 'axios';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Headline, AllNews } from './Components/Card';
 import { Nav } from './Components/Nav';
