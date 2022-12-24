@@ -14,6 +14,7 @@ export const Nav = () => {
             <div className={`links ${showMenu && "showmenu"}`}>
                 <div className={`link-list`}>
                 <img src={crossIcon} onClick={() => setShowMenu(false)} alt=""/>
+                    <a href='/feed'>HOME</a>
                     <a href='/Country'>HEADLINES</a>
                     <div className='divider'></div>
                     <Link to={'/Country'}>UNITED STATES</Link>
