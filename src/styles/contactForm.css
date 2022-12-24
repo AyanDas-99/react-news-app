@@ -1,0 +1,22 @@
+.contactForm {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1.5em;
+}
+
+#submitBtn {
+    width: 40px;
+    border: none;
+}
+
+.contactForm input, textarea {
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    padding: 7px;
+}
