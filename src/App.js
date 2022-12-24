@@ -2,7 +2,7 @@ import "./App.css";
 import { Nav } from "./Components/Nav";
 import "./styles/loading.css";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { Country } from "./Components/Country";
+import { Country } from "./pages/Country";
 import { Feed } from "./pages/Feed";
 import { FooterNav } from "./Components/FooterNav";
 import { createContext, useState } from "react";
