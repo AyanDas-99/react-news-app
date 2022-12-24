@@ -4,6 +4,7 @@ import "./styles/loading.css";
 import { BrowserRouter as Router, Route, Routes , Navigate} from "react-router-dom";
 import { Country } from "./Components/Country";
 import { Feed } from "./pages/Feed";
+import { FooterNav } from "./Components/FooterNav";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/Country" element={<Country />} />
           <Route path="*" element={<h1>It's the wrong page</h1>} />
         </Routes>
+        <FooterNav />
       </Router>
    </div>
   );
