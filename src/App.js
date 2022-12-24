@@ -6,6 +6,7 @@ import { Country } from "./pages/Country";
 import { Feed } from "./pages/Feed";
 import { FooterNav } from "./Components/FooterNav";
 import { createContext, useState } from "react";
+import { Contact } from "./pages/Contact";
 
 export const AppContext = createContext();
 
@@ -20,6 +21,10 @@ function App() {
             <Route path="/" element={<Navigate to="/feed" />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/Country" element={<Country />} />
+            <Route path="/Contact" element={<Contact />} />
+            {/* <Route path="/Contact" element={<Request />} /> */}
+            {/* <Route path="/Contact" element={<About />} /> */}
+            {/* <Route path="/Contact" element={<Sponser />} /> */}
             <Route path="*" element={<h1>It's the wrong page</h1>} />
           </Routes>
           <FooterNav />
