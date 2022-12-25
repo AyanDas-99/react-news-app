@@ -8,7 +8,7 @@ export const Headline = (props) => {
             <div className="carousel-inner">
 
                 <div className="carousel-item active">
-                    <img src={articles[0].urlToImage} className="d-block w-80 carousel-image" alt='article background'/>
+                    <img src={articles[0].urlToImage} className="d-block w-80 carousel-image" alt='article background' />
                     <a href={articles[0].url} target='_blank' rel="noreferrer">
                         <div className="carousel-caption d-md-block" >
                             <h5>{articles[0].title}</h5>
@@ -20,7 +20,7 @@ export const Headline = (props) => {
                 {articles.slice(1).map((article, key) => {
                     return (
                         <div className="carousel-item" key={key}>
-                            <img src={article.urlToImage} className="d-block w-80" alt='article background'/>
+                            <img src={article.urlToImage} className="d-block w-80" alt='article background' />
                             <a href={article.url} target='_blank' rel="noreferrer">
                                 <div className="carousel-caption d-md-block">
                                     <h5>{article.title}</h5>
@@ -56,9 +56,9 @@ export const AllNews = (props) => {
                 return (
                     <a href={article.url} target="_blank" key={key} rel="noreferrer">
                         <div className='article'>
-                            <img src={article.urlToImage} className='article-img' alt='article cover icon'/>
+                            <img src={article.urlToImage} className='article-img' alt='article cover icon' />
                             <div className='info'>
-                                <h6>{article.title}</h6>
+                                <p>{article.title}</p>
                             </div>
                         </div>
                     </a>
