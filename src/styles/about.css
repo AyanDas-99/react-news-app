@@ -1,4 +1,4 @@
-.container {
+.main {
     background-color: white;
     margin: 1em auto;
     padding: 2em;
@@ -17,4 +17,16 @@ h2 {
 section img {
     width: 100%;
     max-width: 500px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1400px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .news {
+        display: none;
+    } 
 }
