@@ -13,3 +13,8 @@ h2 {
     margin: 1em 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+section img {
+    width: 100%;
+    max-width: 500px;
+}
