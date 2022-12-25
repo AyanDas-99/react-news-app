@@ -1,9 +1,8 @@
 import sendImg from '../media/send.png'
-import '../styles/contactForm.css'
+import '../styles/form.css'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { useState } from 'react'
 
 export const Contact = () => {
 
