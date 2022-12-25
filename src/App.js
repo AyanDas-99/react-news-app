@@ -8,7 +8,7 @@ import { FooterNav } from "./Components/FooterNav";
 import { createContext, useState } from "react";
 import { Contact } from "./pages/Contact";
 import { Request } from "./pages/Request";
-
+import { About } from "./pages/About";
 export const AppContext = createContext();
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
             <Route path="/Country" element={<Country />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Request" element={<Request />} />
-            {/* <Route path="/Contact" element={<About />} /> */}
+            <Route path="/About" element={<About />} />
             {/* <Route path="/Contact" element={<Sponser />} /> */}
             <Route path="*" element={<h1>It's the wrong page</h1>} />
           </Routes>
