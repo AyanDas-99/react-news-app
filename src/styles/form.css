@@ -1,0 +1,38 @@
+.contactForm {
+    background-color: white;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1.5em;
+}
+
+.contactForm h2 {
+    font-weight: 100;
+}
+
+#submitBtn {
+    width: 40px;
+    border: none;
+}
+
+.contactForm input, textarea {
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    padding: 7px;
+}
+
+.files {
+    text-align: left;
+    padding: 1em;
+    background-color: whitesmoke;
+}
+.files input {
+    border: none;
+}
+.files label {
+    margin-right: 1em;
+}
